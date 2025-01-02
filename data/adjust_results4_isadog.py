@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/adjust_results4_isadog.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                 
+# PROGRAMMER: Amita Kini 
+# DATE CREATED:02.01.2025                            
 # REVISED DATE: 
 # PURPOSE: Create a function adjust_results4_isadog that adjusts the results 
 #          dictionary to indicate whether or not the pet image label is of-a-dog, 
@@ -38,7 +38,35 @@
 #       data type so no return is needed.
 # 
 def adjust_results4_isadog(results_dic, dogfile):
-    """
+  for key in results_dic:
+      try:
+           with open(dogfile, 'r') as file:  # Open the file in read mode
+               found=0
+               flag=0
+               for line in file:  # Read line by line
+
+                    line_temp=line.lower().strip()#convert to lower case and strip out white spaces 
+                    if results_dic[key][0] in line_temp:  # Check if the keyword is in the line
+                        found= 1  
+                        print(found) 
+
+                    if results_dic[key][1] in line_temp:  # Check if the keyword is in the line
+                        flag=1
+                        print(flag)
+
+                    print(flag,found)
+            
+               results_dic[key].append(found)
+
+               results_dic[key].append(flag)
+               
+      except FileNotFoundError:
+        print(f"The file '{dogfile}' does not exist.")
+      except Exception as e:
+        print(f"An error occurred: {e}")
+
+                
+"""
     Adjusts the results dictionary to determine if classifier correctly 
     classified images 'as a dog' or 'not a dog' especially when not a match. 
     Demonstrates if model architecture correctly classifies dog images even if
@@ -67,4 +95,4 @@ def adjust_results4_isadog(results_dic, dogfile):
     Returns:
            None - results_dic is mutable data type so no return needed.
     """           
-    None
+  
