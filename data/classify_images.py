@@ -30,6 +30,18 @@ from classifier import classifier
 #       data type so no return is needed.
 # 
 def classify_images(images_dir, results_dic, model):
+    #  use classiifer function to calculate the classifier label 
+    for key in results_dic:
+          model_label_temp= classifier((image_dir +results_dic[key][0]), model)
+          model_label_lower=model_label_temp.lower()
+          model_lable_strip=model_lable_lower.strip()
+          results_dic[key].append(model_label_strip)
+          if results_dic[key][0] in results_dic[key][1]:
+              results_dic[key].append(1)
+          else:
+              results_dic[key][2].append(0)
+              
+
     """
     Creates classifier labels with classifier function, compares pet labels to 
     the classifier labels, and adds the classifier label and the comparison of 
@@ -65,4 +77,3 @@ def classify_images(images_dir, results_dic, model):
      Returns:
            None - results_dic is mutable data type so no return needed.         
     """
-   
