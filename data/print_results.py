@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/print_results.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:
-# REVISED DATE: 
+# PROGRAMMER: Amita Kini Ravindra
+# DATE CREATED:03.01.2025
+# REVISED DATE: 04.01.2025
 # PURPOSE: Create a function print_results that prints the results statistics
 #          from the results statistics dictionary (results_stats_dic). It 
 #          should also allow the user to be able to print out cases of misclassified
@@ -33,7 +33,77 @@
 # 
 def print_results(results_dic, results_stats_dic, model, 
                   print_incorrect_dogs = False, print_incorrect_breed = False):
-    """
+     # Prints summary statistics over the run
+        print("\n\n*** Results Summary for CNN Model Architecture",model.upper(), 
+          "***")
+        print("{:20}: {:3d}".format('N Images', results_stats_dic['n_images']))
+        print("{:20}: {:3d}".format('N Dog Images', results_stats_dic['n_dogs_img']))
+        print("{:20}: {:3d}".format('N Not-Dog Images', results_stats_dic['n_notdogs_img']))
+   
+
+    # Prints summary statistics (percentages) on Model Run
+        print("\n\n*** Percentage Summary for CNN Model Architecture",model.upper(), 
+          "***")
+    #for key in results_stats_dic:
+        # the value is accessed 
+        # by results_stats_dic[key]
+        #    pct_match - percentage of correct matches
+#            pct_correct_dogs - percentage of correctly classified dogs
+#            pct_correct_breed - percentage of correctly classified dog breeds
+#            pct_correct_notdogs - percentage of correctly classified NON-dogs
+        print("{:20}: {:3f}".format('P match', results_stats_dic['pct_match']*100,"%"))
+        print("{:20}: {:3f}".format('P correct_dogs ', results_stats_dic['pct_correct_dogs']*100,"%"))
+        print("{:20}: {:3f}".format('P correct_breed ', results_stats_dic['pct_correct_breed']*100,"%"))
+        print("{:20}: {:3f}".format('P correct_notdogs', results_stats_dic['pct_correct_notdogs']*100,"%"))
+        if print_incorrect_dogs is True:
+                counter00=0
+                results_dic_anomaly =dict()
+         #calculate the incorrect dog calculation
+         # to check if this exists add a conditiion correct_dogs+ correct_not dogs !=n_images
+         # classifier says dog key[4]==1 and image says not dog key[3]==0  or vice versa 
+         # in that case increement a counter and store the  the image file key and image name key[0] and classifier name key[1]
+         # in a dict and print at the end with counter 
+                if ( results_stat_dic[n_images]!=(results_stat_dic[n_correct_dogs]+results_stat_dic[n_correct_notdogs]))  :
+                       for key in results_dic:
+                           if (sum (results_dic[key][3:]))==1:
+                                counter_00+=1
+                                results_dic_anomaly[key][0]=results_dic[key][0]
+                                results_dic_anomaly[key][1]=results_dic[key][1]
+
+                print("{:20}: {:3d}".format('incorrect dog calculation ',counter_00 ))
+                for key in results_dic_anomaly:
+                    print("{:20}: {:30}".format('The images lables which were incorrectly calculated as dogs ',results_dic_anomaly[key][0] ))      
+                    print("{:20}: {:30}".format('The classifier lables which were incorrectly calculated as dogs ',results_dic_anomaly[key][1] ))      
+
+                  # calculate the incorrect breed 
+        # breeds are incorrect  if correct_breed != correct_dogs 
+        #breed is incorrect when classifier says dog key[4]==1 and image says dog key[3]==1 but pet label match is zero key[2]==0
+ 
+         # in that case increement a counter and store the  the image file key and image name key[0] and classifier name key[1]
+         # in a dict and print at the end with counter       
+                        
+        if print_incorrect_breed is True:
+                counter01=0
+                results_dic_anomaly_01 =dict()
+                if (results_stat_dic[n_correct_dogs]!=(results_stat_dic[n_correct_breed])):
+                     for key in results_dic:
+                        if results_dic[key][2]==0:
+                                if sum(results_dic[key][3:])==2:
+                                     counter01+=1
+                                     results_dic_anomaly_01[key][0]=results_dic[key][0]
+                                     results_dic_anomaly_01[key][1]=results_dic[key][1]
+                print("{:20}: {:3d}".format('incorrect dog calculation ',counter01 ))
+                for key in results_dic_anomaly_01:
+
+                        print("{:20}: {:30}".format('The images labels which were incorrectly calculated breeds ',results_dic_anomaly_01[key][0] ))
+                        print("{:20}: {:30}".format('The classifier labels which were incorrectly calculated breeds ',results_dic_anomaly_01[key][1] ))
+
+                                
+                
+
+
+
+        """
     Prints summary results on the classification and then prints incorrectly 
     classified dogs and incorrectly classified dog breeds if user indicates 
     they want those printouts (use non-default values)
@@ -62,5 +132,5 @@ def print_results(results_dic, results_stats_dic, model,
     Returns:
            None - simply printing results.
     """    
-    None
+    
                 
