@@ -51,10 +51,10 @@ def print_results(results_dic, results_stats_dic, model,
 #            pct_correct_dogs - percentage of correctly classified dogs
 #            pct_correct_breed - percentage of correctly classified dog breeds
 #            pct_correct_notdogs - percentage of correctly classified NON-dogs
-        print("{:20}: {:3f}".format('P match', results_stats_dic['pct_match']*100,"%"))
-        print("{:20}: {:3f}".format('P correct_dogs ', results_stats_dic['pct_correct_dogs']*100,"%"))
-        print("{:20}: {:3f}".format('P correct_breed ', results_stats_dic['pct_correct_breed']*100,"%"))
-        print("{:20}: {:3f}".format('P correct_notdogs', results_stats_dic['pct_correct_notdogs']*100,"%"))
+        print("{:20}: {:3f}".format('P match', results_stats_dic['pct_match'],"%"))
+        print("{:20}: {:3f}".format('P correct_dogs ', results_stats_dic['pct_correct_dogs'],"%"))
+        print("{:20}: {:3f}".format('P correct_breed ', results_stats_dic['pct_correct_breed'],"%"))
+        print("{:20}: {:3f}".format('P correct_notdogs', results_stats_dic['pct_correct_notdogs'],"%"))
         if print_incorrect_dogs is True:
                 counter00=0
                 results_dic_anomaly =dict()

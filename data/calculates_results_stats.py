@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER:Amita Kini Ravindra 
 # DATE CREATED:02.01.2025                               
-# REVISED DATE: 03.02.2025
+# REVISED DATE: 04.02.2025
 # PURPOSE: Create a function calculates_results_stats that calculates the 
 #          statistics of the results of the programrun using the classifier's model 
 #          architecture to classify the images. This function will use the 
@@ -105,10 +105,10 @@ def calculates_results_stats(results_dic):
     
     n_notdogs_img =n_images - n_dogs_img   #            n_notdogs_img - number of NON-dog images
     # caclulating the percentages 
-    pct_match =n_match/n_images  
-    pct_correct_dogs=n_correct_dogs/n_images
-    pct_correct_breed+n_correct_breed/n_images
-    pct_correct_notdogs=n_correct_notdogs/n_images
+    pct_match =n_match/n_images #total match to total images 
+    pct_correct_dogs=n_correct_dogs/n_dogs_img # number of correctly classified dogs to number of dog images 
+    pct_correct_breed=n_correct_breed/n_dogs_img# number of correctly classified breeds to total number of dog images
+    pct_correct_notdogs=n_correct_notdogs/n_notdogs_img# number of correct not dog to number of not a dog image 
 # packing the results_stat_dic with the results in the format key : value 
     results_stats_dic["n_images"]=n_images
     results_stats_dic["n_dogs_img"]=n_dogs_img
@@ -117,9 +117,9 @@ def calculates_results_stats(results_dic):
     results_stats_dic["n_correct_dogs"]=n_correct_dogs
     results_stats_dic["n_correct_notdogs"]=n_correct_notdogs
     results_stats_dic["n_correct_breed"]=n_correct_breed
-    results_stats_dic["pct_match"]=pct_match
-    results_stats_dic["pct_correct_dogs"]=pct_correct_dogs
-    results_stats_dic["pct_correct_breed"]=pct_correct_breed
-    results_stats_dic["pct_correct_notdogs"]=pct_correct_notdogs
+    results_stats_dic["pct_match"]=pct_match*100 
+    results_stats_dic["pct_correct_dogs"]=pct_correct_dogs*100 
+    results_stats_dic["pct_correct_breed"]=pct_correct_breed*100 
+    results_stats_dic["pct_correct_notdogs"]=pct_correct_notdogs*100 
     
    
