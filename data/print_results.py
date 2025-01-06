@@ -34,6 +34,7 @@
 def print_results(results_dic, results_stats_dic, model, 
                   print_incorrect_dogs = False, print_incorrect_breed = False):
      # Prints summary statistics over the run
+        #print(results_stats_dic)
         print("\n\n*** Results Summary for CNN Model Architecture",model.upper(), 
           "***")
         print("{:20}: {:3d}".format('N Images', results_stats_dic['n_images']))
@@ -56,26 +57,26 @@ def print_results(results_dic, results_stats_dic, model,
         print("{:20}: {:3f}".format('P correct_breed ', results_stats_dic['pct_correct_breed'],"%"))
         print("{:20}: {:3f}".format('P correct_notdogs', results_stats_dic['pct_correct_notdogs'],"%"))
         if print_incorrect_dogs is True:
-                counter00=0
-                results_dic_anomaly =dict()
+
          #calculate the incorrect dog calculation
          # to check if this exists add a conditiion correct_dogs+ correct_not dogs !=n_images
          # classifier says dog key[4]==1 and image says not dog key[3]==0  or vice versa 
          # in that case increement a counter and store the  the image file key and image name key[0] and classifier name key[1]
          # in a dict and print at the end with counter 
-                if ( results_stat_dic[n_images]!=(results_stat_dic[n_correct_dogs]+results_stat_dic[n_correct_notdogs]))  :
+                if ( results_stats_dic['n_images']!=(results_stats_dic['n_correct_dogs']+results_stats_dic['n_correct_notdogs']))  :
+                       counter_00=0
+                       results_dic_anomaly =dict()
                        for key in results_dic:
                            if (sum (results_dic[key][3:]))==1:
-                                counter_00+=1
-                                results_dic_anomaly[key][0]=results_dic[key][0]
-                                results_dic_anomaly[key][1]=results_dic[key][1]
+                                 counter_00 +=1
+                                 results_dic_anomaly[key]=[results_dic[key][0],results_dic[key][1]]
+                        
+                        for key in results_dic_anomaly:
+                           print("{:20}: {:30}".format('The images lables which were incorrectly calculated as dogs ',results_dic_anomaly[key][0]))      
+                           print("{:20}: {:30}".format('The classifier lables which were incorrectly calculated as dogs ',results_dic_anomaly[key][1]))      
+                        print ("{:20}: {:3d}".format('incorrect dog calculation ',counter_00))
 
-                print("{:20}: {:3d}".format('incorrect dog calculation ',counter_00 ))
-                for key in results_dic_anomaly:
-                    print("{:20}: {:30}".format('The images lables which were incorrectly calculated as dogs ',results_dic_anomaly[key][0] ))      
-                    print("{:20}: {:30}".format('The classifier lables which were incorrectly calculated as dogs ',results_dic_anomaly[key][1] ))      
-
-                  # calculate the incorrect breed 
+        # calculate the incorrect breed 
         # breeds are incorrect  if correct_breed != correct_dogs 
         #breed is incorrect when classifier says dog key[4]==1 and image says dog key[3]==1 but pet label match is zero key[2]==0
  
@@ -83,13 +84,14 @@ def print_results(results_dic, results_stats_dic, model,
          # in a dict and print at the end with counter       
                         
         if print_incorrect_breed is True:
-                counter01=0
-                results_dic_anomaly_01 =dict()
-                if (results_stat_dic[n_correct_dogs]!=(results_stat_dic[n_correct_breed])):
+
+                if (results_stats_dic['n_correct_dogs']!=(results_stats_dic['n_correct_breed'])):
+                     counter01=0
+                     results_dic_anomaly_01 =dict()
                      for key in results_dic:
                         if results_dic[key][2]==0:
                                 if sum(results_dic[key][3:])==2:
-                                     counter01+=1
+                                     counter01 +=1
                                      results_dic_anomaly_01[key][0]=results_dic[key][0]
                                      results_dic_anomaly_01[key][1]=results_dic[key][1]
                 print("{:20}: {:3d}".format('incorrect dog calculation ',counter01 ))

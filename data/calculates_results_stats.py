@@ -121,5 +121,5 @@ def calculates_results_stats(results_dic):
     results_stats_dic["pct_correct_dogs"]=pct_correct_dogs*100 
     results_stats_dic["pct_correct_breed"]=pct_correct_breed*100 
     results_stats_dic["pct_correct_notdogs"]=pct_correct_notdogs*100 
-    
+    return(results_stats_dic)
    

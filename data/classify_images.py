@@ -21,8 +21,7 @@
 #
 ##
 # Imports classifier function for using CNN to classify images 
-from classifier import classifier 
-
+from classifier import classifier     
 # TODO 3: Define classify_images function below, specifically replace the None
 #       below by the function definition of the classify_images function. 
 #       Notice that this function doesn't return anything because the 
@@ -32,14 +31,13 @@ from classifier import classifier
 def classify_images(images_dir, results_dic, model):
     #  use classiifer function to calculate the classifier label 
     for key in results_dic:
-          model_label_temp= classifier((image_dir +results_dic[key][0]), model)
-          model_label_lower=model_label_temp.lower()
-          model_lable_strip=model_lable_lower.strip()
-          results_dic[key].append(model_label_strip)
+          model_label_temp= classifier((images_dir +key), model)
+          model_label_lower=model_label_temp.lower().strip()
+          results_dic[key].append(model_label_lower)
           if results_dic[key][0] in results_dic[key][1]:
-              results_dic[key][2].append(1)
+              results_dic[key].append(1)
           else:
-              results_dic[key][2].append(0)
+              results_dic[key].append(0)
               
 
     """
