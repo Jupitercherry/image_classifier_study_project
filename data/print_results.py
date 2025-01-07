@@ -72,9 +72,11 @@ def print_results(results_dic, results_stats_dic, model,
                                         results_dic_anomaly[key]=[results_dic[key][0],results_dic[key][1]]
                         print ("{:20}: {:3d}".format('The number of incorrect dog calculation done by the model',counter_00))
                        
+                        print("{:20}:".format('The images lables and corresponding classifier labels which were incorrectly calculated as dogs '))      
+                       
                         for key in results_dic_anomaly:
-                                print("{:20}: {:30}".format('The images lables which were incorrectly calculated as dogs ',results_dic_anomaly[key][0]))      
-                                print("{:20}: {:30}".format('The classifier lables which were incorrectly calculated as dogs ',results_dic_anomaly[key][1]))      
+                                print("{:20}:{:30}".format('images lables',results_dic_anomaly[key][0]))      
+                                print("{:20}:{:30}".format('classifier lables',results_dic_anomaly[key][1]))      
 
         # calculate the incorrect breed 
         # breeds are incorrect  if correct_breed != correct_dogs 
@@ -96,10 +98,12 @@ def print_results(results_dic, results_stats_dic, model,
                                                results_dic_anomaly_01[key]=[results_dic[key][0],results_dic[key][1]]
                                                
                 print("{:20}: {:3d}".format('The number of incorrect dog breeds calculated by the model ',counter01 ))
+                print("{:20}:".format('The images lables and corresponding classifier labels which were incorrectly calculated dog breeds '))      
+
                 for key in results_dic_anomaly_01:
 
-                        print("{:20}: {:30}".format('The images labels which were incorrectly calculated breeds ',results_dic_anomaly_01[key][0] ))
-                        print("{:20}: {:30}".format('The classifier labels which were incorrectly calculated breeds ',results_dic_anomaly_01[key][1] ))
+                        print("{:20}: {:30}".format('images label ',results_dic_anomaly_01[key][0] ))
+                        print("{:20}: {:30}".format('classifier labels',results_dic_anomaly_01[key][1] ))
 
                                 
                 
