@@ -97,7 +97,7 @@ def calculates_results_stats(results_dic):
         n_match+=results_dic[key][2]
         
         if sum(results_dic[key][2:]) == 3:
-              n_correct_breed +=1. #number of correctly classified dog breeds
+              n_correct_breed +=1 #number of correctly classified dog breeds
         if sum(results_dic[key][3:]) == 2:
               n_correct_dogs +=1 #number of correctly classified dog images
         if sum(results_dic[key][3:]) == 0 and results_dic[key][2] == 1:
