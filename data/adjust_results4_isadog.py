@@ -45,17 +45,11 @@ def adjust_results4_isadog(results_dic, dogfile):
                flag=0
                for line in file:  # Read line by line
 
-                    line_temp=line.lower().strip()#convert to lower case and strip out white spaces 
-                    if results_dic[key][0] in line_temp:  # Check if the keyword is in the line
+                    line_temp=line.lower().rstrip()#convert to lower case and strip out white spaces 
+                    if line_temp in results_dic[key][0] :  # Check if the keyword is in the line
                         found= 1  
-                        print(found) 
-
-                    if results_dic[key][1] in line_temp:  # Check if the keyword is in the line
+                    if line_temp in results_dic[key][1]:  # Check if the keyword is in the line
                         flag=1
-                        print(flag)
-
-                    print(flag,found)
-            
                results_dic[key].append(found)
 
                results_dic[key].append(flag)
