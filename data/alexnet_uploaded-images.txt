@@ -2,454 +2,31 @@ Command Line Arguments:
      dir = uploaded_images/ 
     arch = alexnet 
  dogfile = dognames.txt
-{'Dog_01.jpg': ['dog'], 'school_bus_01.jpg': ['school bus'], 'Dog_02.jpg': ['dog'], 'Brown_Bear_01.jpg': ['brown bear']}
 
 Pet Image Label Dictionary has 4 key-value pairs.
 Below are 4 of them:
- 1 key:                     Dog_01.jpg  label:                        dog
+ 1 key:        Golden_Retriever_01.jpg  label:           golden retriever
  2 key:              school_bus_01.jpg  label:                 school bus
- 3 key:                     Dog_02.jpg  label:                        dog
+ 3 key:        Golden_Retriever_02.jpg  label:           golden retriever
  4 key:              Brown_Bear_01.jpg  label:                 brown bear
 
      MATCH:
 
+       Golden_Retriever_01.jpg: 
+Real:           golden retriever   Classifier:               golden retriever
+
              school_bus_01.jpg: 
 Real:                 school bus   Classifier:                     school bus
+
+       Golden_Retriever_02.jpg: 
+Real:           golden retriever   Classifier:               golden retriever
 
              Brown_Bear_01.jpg: 
 Real:                 brown bear   Classifier: brown bear, bruin, ursus arctos
 
  NOT A MATCH:
 
-                    Dog_01.jpg: 
-Real:                        dog   Classifier:               golden retriever
-
-                    Dog_02.jpg: 
-Real:                        dog   Classifier:               golden retriever
-
-# Total Images 4 # Matches: 2 # NOT Matches: 2
-0 0
-0 0
-1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-1
-1 1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1
-1 1
-1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1
-1 1
-1
-1 1
-1 1
-1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1 1
-1
-1 1
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
-0 0
+# Total Images 4 # Matches: 4 # NOT Matches: 0
 0 0
 0 0
 0 0
@@ -507,61 +84,6 @@ Real:                        dog   Classifier:               golden retriever
 0 0
 0 0
 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
-0 1
 1
 1 1
 1 1
@@ -585,44 +107,461 @@ Real:                        dog   Classifier:               golden retriever
 1 1
 1 1
 1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+0 0
+1
 1
 1 1
-1
 1 1
 1 1
 1 1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
-1
 1 1
-1
 1 1
 1 1
 1 1
 1 1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
-1
 1 1
-1
 1 1
 1 1
-1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
@@ -641,21 +580,17 @@ Real:                        dog   Classifier:               golden retriever
 1 1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
 1 1
-1
 1 1
-1
 1 1
 1 1
 1 1
 1 1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
@@ -670,11 +605,9 @@ Real:                        dog   Classifier:               golden retriever
 1 1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
@@ -690,24 +623,20 @@ Real:                        dog   Classifier:               golden retriever
 1 1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
 1 1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
@@ -724,7 +653,6 @@ Real:                        dog   Classifier:               golden retriever
 1 1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
@@ -735,7 +663,6 @@ Real:                        dog   Classifier:               golden retriever
 1 1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
@@ -744,7 +671,6 @@ Real:                        dog   Classifier:               golden retriever
 1 1
 1 1
 1 1
-1
 1 1
 1 1
 1 1
@@ -754,7 +680,28 @@ Real:                        dog   Classifier:               golden retriever
 1 1
 1 1
 1 1
-1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
 1 1
 0 0
 0 0
@@ -983,9 +930,17 @@ Real:                        dog   Classifier:               golden retriever
 
      MATCH:
 
+       Golden_Retriever_01.jpg: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
              school_bus_01.jpg: 
 Real:                 school bus   Classifier:                     school bus  
 PetLabelDog: 0  ClassLabelDog: 0
+
+       Golden_Retriever_02.jpg: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
 
              Brown_Bear_01.jpg: 
 Real:                 brown bear   Classifier: brown bear, bruin, ursus arctos  
@@ -993,23 +948,15 @@ PetLabelDog: 0  ClassLabelDog: 0
 
  NOT A MATCH:
 
-                    Dog_01.jpg: 
-Real:                        dog   Classifier:               golden retriever  
-PetLabelDog: 1  ClassLabelDog: 1
-
-                    Dog_02.jpg: 
-Real:                        dog   Classifier:               golden retriever  
-PetLabelDog: 1  ClassLabelDog: 1
-
-# Total Images 4 # Matches: 2 # NOT Matches: 2
+# Total Images 4 # Matches: 4 # NOT Matches: 0
 
  ** Statistics from calculates_results_stats() function:
 N Images:  4  N Dog Images:  2  N NotDog Images:  2 
-Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
 
  ** Check Statistics - calculated from this function as a check:
 N Images:  4  N Dog Images:  2  N NotDog Images:  2 
-Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
 
 
 *** Results Summary for CNN Model Architecture ALEXNET ***
@@ -1019,15 +966,9 @@ N Not-Dog Images    :   2
 
 
 *** Result summary in Percentage  for CNN Model Architecture ALEXNET ***
-Pct match           : 50.000000 %                   
+Pct match           : 100.000000 %                   
 Pct correct_dogs    : 100.000000 %                   
-Pct correct_breed   : 0.000000 %                   
+Pct correct_breed   : 100.000000 %                   
 Pct correct_notdogs : 100.000000 %                   
-The number of incorrect dog breeds calculated by the model :   2
-The images lables and corresponding classifier labels which were incorrectly calculated dog breeds :
-images label        : dog                           
-classifier labels   : golden retriever              
-images label        : dog                           
-classifier labels   : golden retriever              
 
 ** Total Elapsed Runtime: 0:0:0

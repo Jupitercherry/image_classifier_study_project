@@ -64,7 +64,7 @@ def get_pet_labels(image_dir):
             results_dic[filenames[idx]]=[pet_labels[idx]]
         else :
             print ( "warning key=",filenames[idx], "exists in results_dic with value =",results_dic[filenames[idx]])
-    print (results_dic)
+    #print (results_dic)
     return (results_dic)
 #def main ():
    #get_pet_labels("/workspace/cd0184/9664b117-d773-4799-b6a3-d4640ed70218/data/pet_images")

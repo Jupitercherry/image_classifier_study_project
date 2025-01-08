@@ -88,22 +88,18 @@ def print_results(results_dic, results_stats_dic, model,
         if print_incorrect_breed is True:
 
                 if (results_stats_dic['n_correct_dogs']!=(results_stats_dic['n_correct_breed'])):
-                       counter01=0
-                       results_dic_anomaly_01 =dict()
-                       for key in results_dic:
-                               if results_dic[key][2]==0:
+                        counter01=0
+                        results_dic_anomaly_01 =dict()
+                        for key in results_dic:
+                                if results_dic[key][2]==0:
                                         if sum(results_dic[key][3:])==2:
-
-                                               counter01 +=1
-                                               results_dic_anomaly_01[key]=[results_dic[key][0],results_dic[key][1]]
-                                               
-                print("{:20}: {:3d}".format('The number of incorrect dog breeds calculated by the model ',counter01 ))
-                print("{:20}:".format('The images lables and corresponding classifier labels which were incorrectly calculated dog breeds '))      
-
-                for key in results_dic_anomaly_01:
-
-                        print("{:20}: {:30}".format('images label ',results_dic_anomaly_01[key][0] ))
-                        print("{:20}: {:30}".format('classifier labels',results_dic_anomaly_01[key][1] ))
+                                                counter01 +=1
+                                                results_dic_anomaly_01[key]=[results_dic[key][0],results_dic[key][1]]
+                        print("{:20}: {:3d}".format('The number of incorrect dog breeds calculated by the model ',counter01 ))
+                        print("{:20}:".format('The images lables and corresponding classifier labels which were incorrectly calculated dog breeds '))
+                        for key in results_dic_anomaly_01:
+                                print("{:20}: {:30}".format('images label ',results_dic_anomaly_01[key][0] ))
+                                print("{:20}: {:30}".format('classifier labels',results_dic_anomaly_01[key][1] ))
 
                                 
                 
