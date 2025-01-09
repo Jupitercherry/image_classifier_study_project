@@ -341,4 +341,4 @@ classifier labels   : leonberg
 images label        : beagle                        
 classifier labels   : walker hound, walker foxhound 
 
-** Total Elapsed Runtime: 0:0:40
+** Total Elapsed Runtime: 0:0:14

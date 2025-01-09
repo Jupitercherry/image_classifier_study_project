@@ -71,4 +71,4 @@ Pct correct_dogs    : 100.000000 %
 Pct correct_breed   : 100.000000 %                   
 Pct correct_notdogs : 100.000000 %                   
 
-** Total Elapsed Runtime: 0:0:14
+** Total Elapsed Runtime: 0:0:5

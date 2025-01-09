@@ -296,7 +296,7 @@ PetLabelDog: 1  ClassLabelDog: 1
 
                     cat_01.jpg: 
 Real:                        cat   Classifier: african hunting dog, hyena dog, cape hunting dog, lycaon pictus  
-PetLabelDog: 0  ClassLabelDog: 1
+PetLabelDog: 0  ClassLabelDog: 0
 
               Beagle_01170.jpg: 
 Real:                     beagle   Classifier:  walker hound, walker foxhound  
@@ -310,11 +310,11 @@ PetLabelDog: 0  ClassLabelDog: 0
 
  ** Statistics from calculates_results_stats() function:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
-Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed:  80.0
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  80.0
 
  ** Check Statistics - calculated from this function as a check:
 N Images: 40  N Dog Images: 30  N NotDog Images: 10 
-Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed:  80.0
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  80.0
 
 
 *** Results Summary for CNN Model Architecture ALEXNET ***
@@ -327,11 +327,7 @@ N Not-Dog Images    :  10
 Pct match           : 75.000000 %                   
 Pct correct_dogs    : 100.000000 %                   
 Pct correct_breed   : 80.000000 %                   
-Pct correct_notdogs : 90.000000 %                   
-The number of incorrect dog calculation done by the model:   1
-The images lables and corresponding classifier labels which were incorrectly calculated as dogs :
-images lables       :cat                           
-classifier lables   :african hunting dog, hyena dog, cape hunting dog, lycaon pictus
+Pct correct_notdogs : 100.000000 %                   
 The number of incorrect dog breeds calculated by the model :   6
 The images lables and corresponding classifier labels which were incorrectly calculated dog breeds :
 images label        : boston terrier                
@@ -347,4 +343,4 @@ classifier labels   : tibetan mastiff
 images label        : beagle                        
 classifier labels   : walker hound, walker foxhound 
 
-** Total Elapsed Runtime: 0:0:23
+** Total Elapsed Runtime: 0:0:7

@@ -335,4 +335,4 @@ classifier labels   : kuvasz
 images label        : beagle                        
 classifier labels   : walker hound, walker foxhound 
 
-** Total Elapsed Runtime: 0:1:33
+** Total Elapsed Runtime: 0:0:43
