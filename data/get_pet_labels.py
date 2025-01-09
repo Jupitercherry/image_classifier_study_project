@@ -48,10 +48,10 @@ def get_pet_labels(image_dir):
     # read from the the images dir and  store file names in a list 
     filenames = listdir(image_dir)
     # create pet labeles by cleaning the data
-    for idx1 in range ( 0,len(filenames),1):
+    for filename in filenames:
          pet_name=""
-         pet_labels_lower= filenames[idx1].lower()
-         pet_labels_split=pet_labels_lower.split("_")
+         #pet_labels_lower= filename.lower()
+         pet_labels_split=filename.lower().split("_")
          for word in pet_labels_split:
               if word.isalpha():
                    pet_name += word + " "
@@ -59,6 +59,7 @@ def get_pet_labels(image_dir):
          pet_labels.append(pet_name)
 
     # check the length of the list and write a loop to get the key
+
     for idx in range( 0,len(filenames),1):
         if filenames[idx] not in results_dic :
             results_dic[filenames[idx]]=[pet_labels[idx]]
