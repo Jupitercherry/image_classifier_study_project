@@ -343,4 +343,4 @@ classifier labels   : tibetan mastiff
 images label        : beagle                        
 classifier labels   : walker hound, walker foxhound 
 
-** Total Elapsed Runtime: 0:0:7
+** Total Elapsed Runtime: 0:0:37
